@@ -1,0 +1,19 @@
+{
+  "name": "addressbook",
+  "version": "1.0.0",
+  "description": "Address Book app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mosorio22/AddressBook.git"
+  },
+  "author": "Michael Osorio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mosorio22/AddressBook/issues"
+  },
+  "homepage": "https://github.com/mosorio22/AddressBook#readme"
+}
