@@ -1,0 +1,26 @@
+Project Plan
+
+I am including this text file to show my initial planning before starting the project. I figured it will also be useful for me as I may be jumping on and off of this project over the next couple of day.
+
+Pre code:
+1. Read through assignment
+2. Decide on unit testing tool (probably Jest)
+3. Determine what will serve the page locally (probably node, but maybe flask)
+4. Decide if app will be SPA or MPA
+5. Determine if Vue.js framework is benefitial or not
+6. Get idea of how I want the app to look
+Post plan:
+7. Serve project locally
+8. Build out basic HTML with styles for structure
+9. Add functionality
+10. Beautify project
+
+Things to remember throughout:
+1. TDD with unit tests
+2. Functional (as much as possible)
+3. Mobile first
+4. Can I make operations async?
+
+If there is enough time:
+1. Look into more robust testing (Integration testing)
+2. Directions for deploying to distributed cloud infrastructure
