@@ -15,11 +15,11 @@ function addUsers(users) {
 	for (let i = 0; i < size; i++) {
 		let divClone = newDiv.cloneNode(true);
 		let anchorClone = newAnchor.cloneNode(true);
-		anchorClone.text = `${users[i]["name"]["first"]} ${users[i]["name"]["last"]}`;
-		anchorClone.href = "description?username=" + users[i]["name"]["first"] + "|" + users[i]["name"]["last"] + "&phone=" + users[i]["cell"];
+		anchorClone.text = `${users[i].name.first} ${users[i].name.last}`;
+		anchorClone.href = "description?username=" + users[i].name.first + "|" + users[i].name.last + "&phone=" + users[i].cell + "&pic=" + encodeURIComponent(users[i].picture.large);
 		divClone.appendChild(anchorClone);
 		let addressClone = newAddress.cloneNode(true);
-		addressClone.innerText = `${users[i]["location"]["street"]["number"]} ${users[i]["location"]["street"]["name"]}`;
+		addressClone.innerText = `${users[i].location.street.number} ${users[i].location.street.name}`;
 		divClone.appendChild(addressClone);
 		documentFragment.appendChild(divClone);
 	}
