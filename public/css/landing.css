@@ -15,7 +15,11 @@ h1 {
   height: 4rem;
   border: 1px solid;
   text-align: center;
-  text-decoration: underline;
+}
+.user-name {
+	color: indigo;
+	text-decoration: none;
+	border-bottom: solid 1px #000;
 }
 
 /*grid*/
