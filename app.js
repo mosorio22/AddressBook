@@ -11,6 +11,10 @@ app.use('*/css',express.static('public/css'));
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname + '/public/index.html'))
 })
+//description page
+app.get('/description', (req, res) => {
+  res.sendFile(path.join(__dirname + '/public/description.html'))
+})
 
 //localhost:3000
 app.listen(port, () => {
