@@ -18,7 +18,7 @@ function addUsers(users) {
 		anchorClone.text = `${users[i]["name"]["first"]} ${users[i]["name"]["last"]}`;
 		divClone.appendChild(anchorClone);
 		let addressClone = newAddress.cloneNode(true);
-		addressClone.text = `${users[i]["location"]["street"]["number"]} ${users[i]["location"]["street"]["name"]}`;
+		addressClone.innerText = `${users[i]["location"]["street"]["number"]} ${users[i]["location"]["street"]["name"]}`;
 		divClone.appendChild(addressClone);
 		documentFragment.appendChild(divClone);
 	}

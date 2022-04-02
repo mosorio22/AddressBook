@@ -3,8 +3,10 @@ const app = express();
 const path = require('path');
 const port = 3000;
 
-//set up js extensions
+//set up js and css extensions
 app.use('*/js',express.static('public/js'));
+//set up js extensions
+app.use('*/css',express.static('public/css'));
 //index.html is landing page
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname + '/public/index.html'))
