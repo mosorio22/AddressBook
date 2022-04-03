@@ -1,6 +1,5 @@
 //function to add users to page
 function addUsers(users) {
-	window.data = users;
 	const size = users.length;
 	//create new profile divs and append to wrapper div
 	let newDiv = document.createElement("div");
