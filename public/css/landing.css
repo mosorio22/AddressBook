@@ -19,6 +19,9 @@ h1 {
 	color: indigo;
 	text-decoration: none;
 	border-bottom: solid 1px #000;
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /*grid*/
