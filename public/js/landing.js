@@ -3,7 +3,7 @@ function addUsers(users) {
 	const size = users.length;
 	//create new profile divs and append to wrapper div
 	let newDiv = document.createElement("div");
-	newDiv.className = "user-profile";
+	newDiv.className = "user-profile-info";
 	let newAnchor = document.createElement("a");
 	newAnchor.className = "user-name";
 	let newAddress = document.createElement("p");
@@ -12,15 +12,17 @@ function addUsers(users) {
 	//store clones in document fragment to only append to dom once
 	let documentFragment = document.createDocumentFragment();
 	for (let i = 0; i < size; i++) {
-		let divClone = newDiv.cloneNode(true);
+		let nameDiv = newDiv.cloneNode(true);
+		let addressDiv = newDiv.cloneNode(true);
 		let anchorClone = newAnchor.cloneNode(true);
 		anchorClone.text = `${users[i].name.first} ${users[i].name.last}`;
 		anchorClone.href = "description?username=" + users[i].name.first + "|" + users[i].name.last + "&phone=" + users[i].cell + "&pic=" + encodeURIComponent(users[i].picture.large);
-		divClone.appendChild(anchorClone);
+		nameDiv.appendChild(anchorClone);
 		let addressClone = newAddress.cloneNode(true);
 		addressClone.innerText = `${users[i].location.street.number} ${users[i].location.street.name}`;
-		divClone.appendChild(addressClone);
-		documentFragment.appendChild(divClone);
+		addressDiv.appendChild(addressClone);
+		documentFragment.appendChild(nameDiv);
+		documentFragment.appendChild(addressDiv);
 	}
 	wrapper.appendChild(documentFragment);
 }
