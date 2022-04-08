@@ -16,7 +16,8 @@ function addUsers(users) {
 		let addressDiv = newDiv.cloneNode(true);
 		let anchorClone = newAnchor.cloneNode(true);
 		anchorClone.text = `${users[i].name.first} ${users[i].name.last}`;
-		anchorClone.href = "description?username=" + users[i].name.first + "|" + users[i].name.last + "&phone=" + users[i].cell + "&pic=" + encodeURIComponent(users[i].picture.large);
+		//pass data in as query params
+		anchorClone.href = "description?username=" + users[i].name.first + "|" + users[i].name.last + "&phone=" + users[i].cell + "&pic=" + encodeURIComponent(users[i].picture.large) + "&age=" + users[i].dob.age + "&address=" + users[i].location.street.number + "|" + users[i].location.street.name;
 		nameDiv.appendChild(anchorClone);
 		let addressClone = newAddress.cloneNode(true);
 		addressClone.innerText = `${users[i].location.street.number} ${users[i].location.street.name}`;
